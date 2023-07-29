@@ -4,7 +4,7 @@ let counter = {
 
 function updateLoaderText() {
   let progress = Math.round(counter.value);
-  $('.loader_number').text(progress);
+  $(".loader_number").text(progress);
 }
 
 let tl = gsap.timeline({});
@@ -13,3 +13,9 @@ tl.to(counter, {
   value: 100,
   duration: 7
 });
+tl.to(".loader_progress", {
+  width: "100%",
+  duration: 7
+}, 0);
+
+
